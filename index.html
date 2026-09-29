@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Premium Lebanese beverage menu featuring signature cocktails, wines, coffee, tea, and fresh drinks."
+    />
+    <title>Beverage Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <nav class="nav container" aria-label="Main navigation">
+          <div class="nav-links">
+            <a href="#wine">Wine</a>
+            <a href="#beer">Beer</a>
+            <a href="#cocktails">Cocktails</a>
+            <a href="#coffee-tea">Coffee &amp; Tea</a>
+            <a href="#more-drinks">Soft Drinks</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-overlay"></div>
+          <div class="container hero-inner">
+            <div class="hero-copy reveal">
+              <p class="eyebrow">Levantine luxury, poured with care</p>
+              <h1>Sip Something Extraordinary</h1>
+              <p class="hero-description">
+                Curated pours, signature cocktails, and cellar selections shaped for a memorable Lebanese evening.
+              </p>
+              <div class="hero-actions">
+                <a href="#menu" class="primary-btn">Explore Menu</a>
+              </div>
+            </div>
+            <aside class="hero-aside reveal" aria-label="Lebanese wine regions">
+              <div class="hero-aside-top">
+                <span>LOCAL ROOTS</span>
+                <span>BEIRUT · BEKAA</span>
+              </div>
+              <p class="hero-aside-place">From the<br /><em>Bekaa</em><br />to Beirut.</p>
+              <div class="hero-aside-bottom">
+                <span>LEBANON</span>
+                <span>WINE · SPIRITS · COFFEE</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="signature-showcase" id="signature-drinks">
+          <div class="container">
+            <div class="section-kicker">Signature pours</div>
+            <h2>The House Signatures</h2>
+            <div class="feature-grid" id="feature-grid"></div>
+          </div>
+        </section>
+
+        <section class="filter-panel" id="menu">
+          <div class="container filter-wrap">
+            <div class="filter-copy">
+              <p class="eyebrow">Curated collection</p>
+              <h2>Find your perfect pour</h2>
+            </div>
+            <div class="filter-controls" aria-label="Beverage filters">
+              <label class="search-field">
+                <span>Search</span>
+                <input type="search" id="searchInput" placeholder="Search by beverage name" />
+              </label>
+              <label>
+                <span>Category</span>
+                <select id="categoryFilter">
+                  <option value="all">All categories</option>
+                </select>
+              </label>
+              <label>
+                <span>Temp</span>
+                <select id="tempFilter">
+                  <option value="all">All temperatures</option>
+                  <option value="hot">Hot</option>
+                  <option value="cold">Cold</option>
+                </select>
+              </label>
+              <label>
+                <span>Alcohol</span>
+                <select id="alcoholFilter">
+                  <option value="all">All</option>
+                  <option value="alcoholic">Alcoholic</option>
+                  <option value="non-alcoholic">Non-alcoholic</option>
+                </select>
+              </label>
+              <label>
+                <span>Vegan</span>
+                <select id="veganFilter">
+                  <option value="all">Any</option>
+                  <option value="vegan">Vegan</option>
+                  <option value="non-vegan">Non-vegan</option>
+                </select>
+              </label>
+              <label>
+                <span>Sort</span>
+                <select id="sortFilter">
+                  <option value="popularity">Popularity</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                </select>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <div class="container" id="menu-sections" aria-live="polite"></div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div>
+            <p>
+              An intimate Lebanese dining experience where warm hospitality, refined ingredients, and exceptional pours meet.
+            </p>
+          </div>
+          <div>
+            <h3>Menu</h3>
+            <ul>
+              <li><a href="#cocktails">Cocktails</a></li>
+              <li><a href="#wine">Wine</a></li>
+              <li><a href="#beer">Beer</a></li>
+              <li><a href="#coffee-tea">Coffee &amp; Tea</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Cocktails</h3>
+            <ul>
+              <li><a href="#signature-drinks">Signature</a></li>
+              <li><a href="#cocktails">Classics</a></li>
+              <li><a href="#menu">Featured</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Wine</h3>
+            <ul>
+              <li><a href="#wine">Red</a></li>
+              <li><a href="#wine">White</a></li>
+              <li><a href="#wine">Rosé</a></li>
+              <li><a href="#wine">Sparkling</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">© 2026. All rights reserved.</div>
+      </footer>
+    </div>
+
+    <div class="modal hidden" id="beverageModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button type="button" class="close-modal" aria-label="Close details">×</button>
+        <div class="modal-body" id="modalBody"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
