@@ -944,44 +944,6 @@ section h2,
     margin-bottom: 16px;
   }
 
-  .wine-menu .wine-subsection {
-    padding-top: 12px;
-  }
-
-  .wine-menu .wine-subsection-heading {
-    margin-bottom: 8px;
-  }
-
-  .wine-menu .section-grid {
-    gap: 0;
-  }
-
-  .wine-menu .beverage-card {
-    border: 0;
-    border-bottom: 1px solid rgba(40, 25, 19, 0.14);
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .wine-menu .card-body {
-    padding: 16px 4px;
-    border-top: 0;
-  }
-
-  .wine-menu .card-description {
-    min-height: 0;
-  }
-
-  .wine-menu .wine-body {
-    margin-top: 8px;
-    padding-top: 8px;
-  }
-
-  .wine-menu .wine-footer {
-    margin-top: 12px;
-  }
-
   .card-action {
     padding: 0.65rem 0.85rem;
     font-size: 0.76rem;
